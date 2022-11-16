@@ -31,4 +31,4 @@ HEAD
 // 5 -> 2, 4
 // 8 -> 2, 4, 6, 8
 
-[Блок-схема](Task8/diagram.drawio.png) | [Код](Task8/Program.cs)
+[Блок-схема](Task8/diagram.dravio.png) | [Код](Task8/Program.cs)
