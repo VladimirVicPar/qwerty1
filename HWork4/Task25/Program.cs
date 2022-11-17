@@ -11,7 +11,6 @@ int Expo(int A, int B);
     return n; 
 }
 
-// Решение
 
 Console.WriteLine("Введите первое число: ");
 int a = int.Parse(Console.ReadLine()!);
