@@ -30,7 +30,7 @@ for (int i = 0; i < array.Length; i++)
 // {
 // for (int i = 0; i < array.Length; i++)
 // {
-//     array[i] = new Random().Next(2,19);
+//     array[i] = new Random().Next(2,31);
 // }
 // }
 // void PrintArray(int[] array)
