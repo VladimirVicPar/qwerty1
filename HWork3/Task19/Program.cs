@@ -7,38 +7,27 @@
 // 23432 -> да
 
 
-Console.WriteLine("Введите пятизначное число: ");
-int N = int.Parse(Console.ReadLine()!);
+//принимаем на вход пятизначное число
 
-// Метод переворота
-
-void Number(int num)
+int number = 0;
+while (number < 10000 || number > 99999)
 {
-    int n = num;
-    int revers = 0;
-    while (n != 0)
+    Console.Write("Введите пятизначное число: ");
+    number = Convert.ToInt32(Console.ReadLine());
+    if (number < 10000 || number > 99999)
     {
-        int r = n % 10;
-        revers = revers * 10 + r;
-        n = n / 10;
-    }
-    if(num == revers)
-    {
-        Console.Write($"{num} является палиндромом!");
-    }
-    else
-    {
-        Console.Write($"{num} не является палиндромом!");
+        Console.WriteLine("Число не пятизначное");
     }
 }
 
-// Проверка на разрядность числа
+//cравниваем первую и поледнюю цифру, вторую и четвертую в числе
 
-if(N > 9999 && N <=100000)
+if (number / 10000 == number % 10)
 {
-    Number(N);
+    if (number / 1000 % 10 == number % 100 / 10)
+    {
+        Console.WriteLine("Да");
+    }
+    else { Console.WriteLine("Нет"); }
 }
-else 
-{
-    Console.WriteLine($"Ваше число {N} не является пятизначным, попробуйте ввести заново");
-}
+else { Console.WriteLine("Нет"); }
