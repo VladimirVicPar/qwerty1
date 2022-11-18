@@ -4,20 +4,17 @@
 // 9012 -> 12
 
 
-int SumNumbers(int num)
+int sumDigits(int number)
 {
-    int n = num;
-    int rev = 0;
-    while (n != 0)
+    int sum = 0;
+    while (number / 10 != 0)
     {
-        int r = n % 10;
-        rev = rev + r;
-        n = n / 10;
+        sum = sum + number % 10;
+        number = number / 10;
     }
-    return rev;
+    return sum + number;
 }
 
-
-Console.WriteLine("Введите число: ");
-int N = int.Parse(Console.ReadLine()!);
-Console.WriteLine($"Сумма цифр в числе {N} равна: {SumNumbers(N)}");
+Console.Write("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(sumDigits(number));
