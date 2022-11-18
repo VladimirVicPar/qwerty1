@@ -3,17 +3,21 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
-int Expo(int A, int B);
+
+int power(int A, int B)
 {
-    int n = A;
+    int power = A;
     for (int i = 2; i <= B; i++)
-    n = n * A;
-    return n; 
+    {
+        power = power * A;
+    }
+    return power;
 }
 
+Console.Write("Введите число: ");
+int A = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Введите первое число: ");
-int a = int.Parse(Console.ReadLine()!);
-Console.WriteLine("Введите второе число: ");
-int b = int.Parse(Console.ReadLine()!);
-Console.WriteLine($"Число {a}, возведенное в степень {b} равно: {Expo(a,b)}"); 
+Console.Write("Введите cтепень: ");
+int B = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine(power(A, B));
