@@ -5,43 +5,38 @@
 // Вместо N вписываем количество элементов [N].
 // Числа массива вводим вручную
 
-int[] array = new int[5];
-for (int i = 0; i < array.Length; i++)
-{
-    Console.WriteLine($"Введите число: ");
-    array[i] = int.Parse(Console.ReadLine()!);
-}
-
-Console.Write("Вывод массива: ");
-for (int i = 0; i < array.Length; i++)
-{
-    // if(array[i] > 0)
-    Console.Write($"{array[i]}");
-    if (i < array.Length - 1)
-    {
-        Console.Write(", ");
-    }
-}
-
-// Программа задает массив из 15 элементов и наполняет его произвольными элементами
-//
-// int[] array = new int[15];
-// void FillArray(int[] array)
-// {
+// int[] array = new int[5];
 // for (int i = 0; i < array.Length; i++)
 // {
-//     array[i] = new Random().Next(2,31);
+//    Console.WriteLine($"Введите число: ");
+//    array[i] = int.Parse(Console.ReadLine()!);
 // }
-// }
-// void PrintArray(int[] array)
+//
+// Console.Write("Вывод массива: ");
+// for (int i = 0; i < array.Length; i++)
 // {
-// for (int i = 0; i < array.Length - 1; i++)
-// {
-//     Console.Write($"{array[i]}, ");
+//     // if(array[i] > 0)
+//    Console.Write($"{array[i]}");
+//    if (i < array.Length - 1)
+//    {
+//        Console.Write(", ");
+//    }
 // }
-// Console.Write($"{array[array.Length - 1]} ");
-// }
-// PrintArray(array);
-// Console.WriteLine();
-// FillArray(array);
-// PrintArray(array);
+
+// Создаем массив размером N состоящий из случайных чисел
+// и выводим его на экран
+
+int[] randomArray(int n)
+{
+    int[] array = new int[n];
+    Random rand = new Random();
+    for (int i = 0; i < n; i++)
+    {
+        array[i] = rand.Next(0, 100);
+        Console.Write(array[i] + " ");
+    }
+    return array;
+}
+
+Console.Write("Введите число: ");
+int[] randArray = randomArray(Convert.ToInt32(Console.ReadLine()));
