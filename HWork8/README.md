@@ -56,4 +56,4 @@
 11 16 15 06
 10 09 08 07
 
-[Блок-схема](Task62/diagram.dravio.png) | [Код](Task62/Program.cs)
+[Блок-схема](Task62/diagram.drovio.png) | [Код](Task62/Program.cs)
