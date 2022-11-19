@@ -10,22 +10,16 @@
 
 // Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой элементов: 1 строка
 
-// Задача 53: Задайте двумерный массив. Напишите программу, которая поменяет местами первую 
-// и последнюю строку массива.
-
-
-
-//int[]array = new int [10];
 
 // Cоздание двумерного массива.
-int[,] createArray(int n, int m)
+int[,] CreateArray(int n, int m)
 {
     int[,] array = new int[n, m];
     return array;
 }
 
 // Заполнение массива
-int[,] fillArray(int[,] array, int min, int max)
+int[,] FillArray(int[,] array, int min, int max)
 {
     Random rand = new Random();
     for (int i = 0; i < array.GetLength(0); i++)
@@ -37,7 +31,7 @@ int[,] fillArray(int[,] array, int min, int max)
 }
 
 // Печать массива
-void printArray(int[,] array)
+void PrintArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++, Console.WriteLine(""))
         for (int j = 0; j < array.GetLength(1); j++)
@@ -79,8 +73,8 @@ int FindMinSumIndex(int[,] array)
 
 // Решение.
 
-int[,] array = createArray(4, 6);
+int[,] array = CreateArray(4, 6);
 array = fillArray(array, 0, 10);
-printArray(array);
+PrintArray(array);
 Console.WriteLine("");
 Console.WriteLine(FindMinSumIndex(array) + " cтрока с наименьшей суммой элементов");
