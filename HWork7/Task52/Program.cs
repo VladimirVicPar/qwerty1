@@ -30,7 +30,6 @@ int[,] CreateArray(int n, int m)
     return array;
 }
 
-
 // Печать массива
 
 void PrintArray(int[,] array)
@@ -60,8 +59,6 @@ void Average(int[,] array)
         Console.WriteLine("Среднее арифметическое " + (j + 1) + "столбца: " + avg);
     }
 }
-
-
 
 int[,] array = FillArray(7, 7);
 PrintArray(array);
