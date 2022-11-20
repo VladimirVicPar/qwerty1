@@ -74,7 +74,7 @@ int FindMinSumIndex(int[,] array)
 // Решение.
 
 int[,] array = CreateArray(4, 6);
-array = fillArray(array, 0, 10);
+array = FillArray(array, 0, 10);
 PrintArray(array);
 Console.WriteLine("");
 Console.WriteLine(FindMinSumIndex(array) + " cтрока с наименьшей суммой элементов");
